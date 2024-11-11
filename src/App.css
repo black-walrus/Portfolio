@@ -1,38 +1,341 @@
-.App {
-  text-align: center;
+body {
+    background-color: black;
+    overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.profile-wrapper {
+    display: flex; 
+    flex-direction: row;
+    padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-header {
+    position : sticky; 
+    top: 0;
+    height: 100px;
+    width: 100vw;
+    padding-top: 0px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-header-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.name {
+    color: white;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navigation-bar {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    
+    /* justify-content: space-between; */
+
+}
+
+.navigation-list {
+    display: flex; 
+    margin-left: 0;
+    margin-right: 20px;
+    gap: 30px;
+
+}
+
+.navigation-list li {
+    margin-right: 20px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navigation-list li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: red;
+    transition: width .3s;
+}
+
+.navigation-list li:hover::after {
+    width: 100%;
+}
+
+.section {
+    scroll-margin-top: 100px;
+    height: 650px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section-name {
+    font-size: 35px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-content: center;
+}
+
+#about {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    margin-top: 0;
+}
+
+#about h1 {
+    font-family: 'Rubik', sans-serif;
+    color: white;
+}
+
+#about-header {
+    margin-top: -150px;
+}
+
+.profile-img-container {
+    margin-bottom: 10px;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+.profile-description-wrapper p {
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.red-line {
+    height: 1.5px; 
+    width: 400px;
+    border: none;
+    background-color: red;
+    margin-top: 30px;
+}
+
+.socials-container {
+    height: 50px; 
+    width: 200px;
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.github-icon:hover {
+    fill: red;
+}
+
+.gmail-icon:hover {
+    fill: red;
+}
+
+#projects {
+    background-color: white;
+    flex-direction: column;
+}
+
+.project-cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    height: 475px;
+}
+
+.project-card {
+    height: 430px;
+    width: 390px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.project-img {
+    height: 215px;
+    width: 100%;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-description {
+    height: 250px;
+}
+
+.project-description h1 {
+    padding-left: 10px; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.project-description p {
+    padding-left: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.project-tools {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-tools h5 {
+    color: gray;
+    padding-left: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+#skills {
+    background-color: black;
+    flex-direction: column;
+}
+
+#skills h1 {
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    margin-top: -100px;
+}
+
+.skills-container {
+    /* display: flex; 
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+
+.tool-card {
+    height: 150px;
+    width: 150px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.2s ease;
+}
+
+.tool-card h3 {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#python-card:hover {
+    border-color: #3776AB;
+    box-shadow: 0 0 10px 5px #3776AB;
+}
+
+#python-card:hover h3 {
+    color: #3776AB;
+}
+
+#java-card:hover {
+    border-color: #E76F00;
+    box-shadow: 0 0 10px 5px #E76F00;
+}
+
+#java-card:hover h3 {
+    color: #E76F00;
+}
+
+#javascript-card:hover {
+    border-color: #F7DF1E;
+    box-shadow: 0 0 10px 5px #F7DF1E;
+}
+
+#javascript-card:hover h3 {
+    color: #F7DF1E;
+}
+
+#csharp-card:hover {
+    border-color: #9B4F96;
+    box-shadow: 0 0 10px 5px #9B4F96;
+}
+
+#csharp-card:hover h3 {
+    color: #9B4F96;
+}
+
+#php-card:hover {
+    border-color: #8892BF;
+    box-shadow: 0 0 10px 5px #8892BF;
+}
+
+#php-card:hover h3 {
+    color: #8892BF;
+}
+
+#react-card:hover {
+    border-color: #61DAFB;
+    box-shadow: 0 0 10px 5px #61DAFB;
+}
+
+#react-card:hover h3 {
+    color: #61DAFB;
+}
+
+#nodejs-card:hover {
+    border-color: #339933;
+    box-shadow: 0 0 10px 5px #339933;
+}
+
+#nodejs-card:hover h3 {
+    color: #339933;
+}
+
+#dotnet-card:hover {
+    border-color: #512BD4;
+    box-shadow: 0 0 10px 5px #512BD4;
+}
+
+#dotnet-card:hover h3 {
+    color: #512BD4;
+}
+
+#git-card:hover {
+    border-color: #F05032;
+    box-shadow: 0 0 10px 5px #F05032;
+}
+
+#git-card:hover h3 {
+    color: #F05032;
+}
+
+#contact {
+    background-color: white;
+    flex-direction: column;
+}
+
+#contact h1 {
+    margin-top: -400px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: red;
 }
