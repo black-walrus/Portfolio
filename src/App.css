@@ -50,7 +50,6 @@ body {
     margin-left: 0;
     margin-right: 20px;
     gap: 30px;
-
 }
 
 .navigation-list li {
@@ -96,7 +95,7 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 100px;
-    margin-top: 0;
+    margin-top: 100px;
 }
 
 #about h1 {
