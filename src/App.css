@@ -341,3 +341,132 @@ a {
 a:hover {
     color: red;
 }
+
+@media (max-width: 600px) {
+    html, body {
+        background-color: blue;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    #about, #project, #skills {
+        width: 100vw; 
+        margin: 0; 
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #about {
+        height: 800px;
+        padding-top: 220px;
+    }    
+
+    .profile-description-wrapper p {
+        margin-left: 45px;
+        margin-right: 20px;
+    }
+
+    .profile-wrapper h1 {
+        display: none;
+    }
+
+    .profile-wrapper h3 {
+        font-family: 'Rubik', sans-serif;
+        color: white;
+        margin-left: 35px;
+        margin-right: 10px;
+    }
+
+    .red-line {
+        height: 1.5px; 
+        width: 70vw;
+        border: none;
+        background-color: red;
+        margin-top: 30px;
+    }
+
+    #projects {
+        height: 1200px;
+    }
+
+    .project-cards-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 20px;
+        height: 475px;
+    }
+    
+    .project-card {
+        height: 320px;
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+    }
+
+    #projects-section-h1 {
+        margin-top: -550px;
+    }
+
+    .project-h1 {
+        display: none;
+    }
+
+    .project-h4 {
+        padding-left: 10px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .project-description p {
+        font-size: 12px;
+        padding-left: 10px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .project-img {
+        height: 150px; 
+        width: 100%;
+    }
+
+    #skills {
+        height: 1000px;
+    }
+
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .tool-card {
+        height: 125px;
+        width: 125px;
+        border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: box-shadow 0.2s ease;
+    }
+
+    .app-header {
+        padding: 0;
+        height: 20px;
+        width: 100vw;
+    }
+
+    .navigation-bar {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile-wrapper h3 {
+        display: none;
+    }
+    .project-description h4 {
+        display: none;
+    }
+}

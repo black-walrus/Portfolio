@@ -52,6 +52,12 @@ function App() {
             Hi, I'm <span style={{color: 'red'}}>Seth Gruspe</span>. A computer science student and an
             aspiring software engineer.
           </h1>
+
+          <h3>
+            Hi, I'm <span style={{color: 'red'}}>Seth Gruspe</span>. A computer science student and an
+            aspiring software engineer.
+          </h3>
+
           </div>
         
          
@@ -81,7 +87,7 @@ function App() {
       </section>
 
       <section id="projects" className="section">
-        <h1 className="section-name"> Projects </h1> 
+        <h1 id="projects-section-h1" className="section-name"> Projects </h1> 
 
         <div className="project-cards-container">
 
@@ -91,8 +97,8 @@ function App() {
             </div>
 
             <div className="project-description">
-              <h1> Express Tuberculosis Buster </h1>
-
+              <h1 className="project-h1"> Express Tuberculosis Buster </h1>
+              <h4 className="project-h4"> Express Tuberculosis Buster </h4>
               <p> An automated screening software that uses machine learning
                   to detect Tuberculosis in chest X-ray images developed in a collaborative effort. 
               </p>
@@ -111,8 +117,8 @@ function App() {
             </div>
 
             <div className="project-description">
-              <h1> Games of the General Online </h1>
-
+              <h1 className="project-h1"> Games of the General Online </h1>
+              <h4 className="project-h4"> Games of the General Online </h4>
               <p>
                 A single-player Lichess-inspired web application of the popular Filipino board game. Work in Progress.
               </p>
@@ -133,8 +139,8 @@ function App() {
             </div>
 
             <div className="project-description">
-              <h1> Battleship CLI </h1>
-
+              <h1 className="project-h1"> Battleship CLI </h1>
+              <h4 className="project-h4"> Battleship CLI </h4>
               <p>
                 A Command Line Interface (CLI) version of the classic board game Battleship, featuring 
                 Sea Mines for enhanced gameplay.
