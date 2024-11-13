@@ -344,7 +344,7 @@ a:hover {
 
 @media (max-width: 600px) {
     html, body {
-        background-color: blue;
+        background-color: black;
         overflow-x: hidden;
         margin: 0;
         padding: 0;
