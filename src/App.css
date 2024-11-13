@@ -10,12 +10,15 @@ body {
 }
 
 .app-header {
-    position : sticky; 
+    position : fixed; 
     top: 0;
+    left: 0;
     height: 100px;
     width: 100vw;
     padding-top: 0px;
-
+    padding: 0; 
+    margin: 0;
+    z-index: 1000;
 }
 
 .app-header-inner {
@@ -37,7 +40,7 @@ body {
     height: 100px;
     display: flex;
     align-items: center;
-    
+
     /* justify-content: space-between; */
 
 }
